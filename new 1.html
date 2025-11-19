@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House of Lucin8 - Cinematic Brand Storytelling</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <style>
+        /* Base styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a0a; /* A very dark, near-black */
+            color: #f1f1f1;
+        }
+
+        /* Gold color variable */
+        :root {
+            --gold: #d4af37; /* A classic gold. Using Tailwind's amber-400/500 is also good */
+        }
+        
+        .text-gold {
+            color: var(--gold);
+        }
+        
+        .bg-gold {
+            background-color: var(--gold);
+        }
+        
+        .border-gold {
+            border-color: var(--gold);
+        }
+        
+        .hover\:bg-gold-dark:hover {
+            background-color: #b89b2e; /* A slightly darker gold for hover */
+        }
+        
+        /* Focus styles for accessibility and premium feel */
+        input:focus, textarea:focus {
+            border-color: var(--gold) !important;
+            ring-color: var(--gold) !important;
+            ring-opacity: 0.5 !important;
+        }
+
+        /* Fade-in-on-scroll animation */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-in.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Subtle glow for headlines */
+        .gold-glow {
+            text-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+        }
+
+        /* Custom message box */
+        #messageBox {
+            transition: opacity 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-black text-gray-100">
+
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50 w-full bg-black/80 backdrop-blur-md border-b border-gray-800">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo (Text-based) -->
+                <a href="#home" class="text-2xl font-bold text-gold tracking-wider uppercase gold-glow">
+                    House of Lucin8
+                </a>
+                
+                <!-- Desktop Nav -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="text-gray-300 hover:text-gold transition-colors duration-300">About</a>
+                    <a href="#services" class="text-gray-300 hover:text-gold transition-colors duration-300">Services</a>
+                    <a href="#work" class="text-gray-300 hover:text-gold transition-colors duration-300">Work</a>
+                    <a href="#contact" class="inline-block bg-gold text-black font-semibold py-2 px-5 rounded-lg hover:bg-gold-dark transition-colors duration-300">
+                        Contact
+                    </a>
+                </div>
+                
+                <!-- Mobile Nav Button (Placeholder) -->
+                <div class="md:hidden">
+                    <a href="#contact" class="inline-block bg-gold text-black font-semibold py-2 px-5 rounded-lg hover:bg-gold-dark transition-colors duration-300">
+                        Contact
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="min-h-screen flex items-center justify-center text-center relative overflow-hidden px-4" style="background: radial-gradient(circle, #1a1a1a, #0a0a0a 70%);">
+            <!-- Subtle background grain/noise effect could be added here -->
+            <div class="z-10">
+                <h1 class="text-5xl md:text-7xl lg:text-8xl font-extrabold uppercase tracking-tighter text-white drop-shadow-lg">
+                    Cinematic
+                </h1>
+                <h2 class="text-5xl md:text-7xl lg:text-8xl font-extrabold uppercase tracking-tighter text-gold gold-glow -mt-2 md:-mt-4">
+                    Brand Storytelling
+                </h2>
+                <p class="mt-6 text-lg md:text-xl text-gray-300 max-w-2xl mx-auto fade-in">
+                    We are a creative powerhouse. We produce high-quality, cinematic content that elevates how brands communicate.
+                </p>
+                <a href="#work" class="mt-10 inline-block bg-gold text-black font-bold py-3 px-10 rounded-lg uppercase tracking-wider hover:bg-gold-dark transition-colors duration-300 fade-in">
+                    View Our Work
+                </a>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-24 sm:py-32 px-4">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-4xl md:text-5xl font-bold tracking-tight fade-in">
+                    We Are <span class="text-gold gold-glow">House of Lucin8</span>
+                </h2>
+                <p class="mt-6 text-lg text-gray-300 leading-relaxed fade-in">
+                    House of Lucin8 is a creative agency and media company specializing in visual storytelling for brands. We aren't a marketing agency; our strength lies in the full-scale production of brand films and brand-driven campaigns.
+                </p>
+                <p class="mt-4 text-lg text-gray-300 leading-relaxed fade-in">
+                    We cater to clients who want bold, luxurious, and strong visual storytelling that moves consumers.
+                </p>
+            </div>
+        </section>
+
+        <!-- Services / Process Section -->
+        <section id="services" class="py-24 sm:py-32 bg-gray-950 px-4">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-center mb-16 fade-in">
+                    Our Production Process
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12">
+                    <!-- Step 1: Concept -->
+                    <div class="text-center fade-in" style="transition-delay: 100ms;">
+                        <div class="text-4xl font-extrabold text-gold gold-glow">01.</div>
+                        <h3 class="text-2xl font-semibold mt-4">Concept</h3>
+                        <p class="mt-2 text-gray-400">Crafting the creative concept for a brand film that aligns with your vision.</p>
+                    </div>
+                    <!-- Step 2: Production -->
+                    <div class="text-center fade-in" style="transition-delay: 200ms;">
+                        <div class="text-4xl font-extrabold text-gold gold-glow">02.</div>
+                        <h3 class="text-2xl font-semibold mt-4">Production</h3>
+                        <p class="mt-2 text-gray-400">Handling the full, high-quality production process from start to finish.</p>
+                    </div>
+                    <!-- Step 3: Post-Production -->
+                    <div class="text-center fade-in" style="transition-delay: 300ms;">
+                        <div class="text-4xl font-extrabold text-gold gold-glow">03.</div>
+                        <h3 class="text-2xl font-semibold mt-4">Post-Production</h3>
+                        <p class="mt-2 text-gray-400">Editing, color grading, and sound design to create a cinematic feel.</p>
+                    </div>
+                    <!-- Step 4: Final Delivery -->
+                    <div class="text-center fade-in" style="transition-delay: 400ms;">
+                        <div class="text-4xl font-extrabold text-gold gold-glow">04.</div>
+                        <h3 class="text-2xl font-semibold mt-4">Final Delivery</h3>
+                        <p class="mt-2 text-gray-400">Delivering a polished final product that moves your audience.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Work / Portfolio Section -->
+        <section id="work" class="py-24 sm:py-32 px-4">
+            <div class="max-w-7xl mx-auto">
+                <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-center mb-16 fade-in">
+                    Selected Work
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12">
+                    <!-- Project 1 Placeholder -->
+                    <div class="bg-gray-900 rounded-lg overflow-hidden group fade-in">
+                        <a href="#" class="block">
+                            <img src="https://placehold.co/800x600/1a1a1a/d4af37/Brand%20Film%201?text=Project%20Aethel&font=inter" 
+                                 alt="Placeholder for Project Aethel"
+                                 class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
+                                 onerror="this.src='https://placehold.co/800x600/1a1a1a/d4af37?text=Project%20Aethel&font=inter'">
+                            <div class="p-6">
+                                <h3 class="text-2xl font-semibold text-gold">Project Aethel</h3>
+                                <p class="mt-2 text-gray-400">Brand Film</p>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <!-- Project 2 Placeholder -->
+                    <div class="bg-gray-900 rounded-lg overflow-hidden group fade-in" style="transition-delay: 100ms;">
+                        <a href="#" class="block">
+                            <img src="https://placehold.co/800x600/1f1f1f/d4af37/Brand%20Campaign%201?text=Project%20Noctis&font=inter" 
+                                 alt="Placeholder for Project Noctis"
+                                 class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
+                                 onerror="this.src='https://placehold.co/800x600/1f1f1f/d4af37?text=Project%20Noctis&font=inter'">
+                            <div class="p-6">
+                                <h3 class="text-2xl font-semibold text-gold">Project Noctis</h3>
+                                <p class="mt-2 text-gray-400">Brand-Driven Campaign</p>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Project 3 Placeholder -->
+                    <div class="bg-gray-900 rounded-lg overflow-hidden group fade-in" style="transition-delay: 200ms;">
+                        <a href="#" class="block">
+                            <img src="https://placehold.co/800x600/1a1a1a/d4af37/Brand%20Film%202?text=Project%20Orion&font=inter" 
+                                 alt="Placeholder for Project Orion"
+                                 class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
+                                 onerror="this.src='https://placehold.co/800x600/1a1a1a/d4af37?text=Project%20Orion&font=inter'">
+                            <div class="p-6">
+                                <h3 class="text-2xl font-semibold text-gold">Project Orion</h3>
+                                <p class="mt-2 text-gray-400">Brand Film</p>
+                            </div>
+                        </a>
+                    </div>
+                    
+                    <!-- Project 4 Placeholder -->
+                    <div class="bg-gray-900 rounded-lg overflow-hidden group fade-in" style="transition-delay: 300ms;">
+                        <a href="#" class="block">
+                            <img src="https://placehold.co/800x600/1f1f1f/d4af37/Brand%20Campaign%202?text=Project%20Sol&font=inter" 
+                                 alt="Placeholder for Project Sol"
+                                 class="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-500 ease-in-out"
+                                 onerror="this.src='https://placehold.co/800x600/1f1f1f/d4af37?text=Project%20Sol&font=inter'">
+                            <div class="p-6">
+                                <h3 class="text-2xl font-semibold text-gold">Project Sol</h3>
+                                <p class="mt-2 text-gray-400">Brand-Driven Campaign</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-24 sm:py-32 bg-gray-950 px-4">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-4xl md:text-5xl font-bold tracking-tight fade-in">
+                    Elevate Your Brand
+                </h2>
+                <p class="mt-4 text-lg text-gray-300 leading-relaxed fade-in">
+                    Ready to position your message more powerfully? We work with companies, brands, and small businesses. Let's create something cinematic.
+                </p>
+                
+                <form id="contactForm" class="mt-12 text-left fade-in" style="transition-delay: 100ms;">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-400">Name</label>
+                            <input type="text" name="name" id="name" required
+                                   class="mt-1 block w-full bg-gray-800 border-gray-700 text-white rounded-lg shadow-sm focus:border-gold focus:ring focus:ring-gold focus:ring-opacity-50 py-3 px-4">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-400">Email</label>
+                            <input type="email" name="email" id="email" required
+                                   class="mt-1 block w-full bg-gray-800 border-gray-700 text-white rounded-lg shadow-sm focus:border-gold focus:ring focus:ring-gold focus:ring-opacity-50 py-3 px-4">
+                        </div>
+                    </div>
+                    <div class="mt-6">
+                        <label for="message" class="block text-sm font-medium text-gray-400">Message</label>
+                        <textarea id="message" name="message" rows="5" required
+                                  class="mt-1 block w-full bg-gray-800 border-gray-700 text-white rounded-lg shadow-sm focus:border-gold focus:ring focus:ring-gold focus:ring-opacity-50 py-3 px-4"></textarea>
+                    </div>
+                    <div class="text-center mt-8">
+                        <button type="submit"
+                                class="bg-gold text-black font-bold py-3 px-10 rounded-lg uppercase tracking-wider hover:bg-gold-dark transition-colors duration-300">
+                            Send Message
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-12 bg-black border-t border-gray-900 px-4">
+        <div class="max-w-7xl mx-auto text-center text-gray-500">
+            <p>&copy; 2025 House of Lucin8. All Rights Reserved.</p>
+            <p class="mt-2 text-sm">A Creative Agency & Media Company</p>
+        </div>
+    </footer>
+
+    <!-- Message Box (Hidden by default) -->
+    <div id="messageBox" class="fixed inset-0 bg-black/70 z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none">
+        <div class="bg-gray-900 rounded-lg shadow-xl p-8 max-w-sm w-full text-center border border-gray-700">
+            <h3 class="text-2xl font-semibold text-gold mb-4">Thank You!</h3>
+            <p id="messageText" class="text-gray-200 mb-6">Your message has been sent successfully.</p>
+            <button id="closeButton" class="bg-gold text-black font-bold py-2 px-6 rounded-lg hover:bg-gold-dark transition-colors duration-300">
+                Close
+            </button>
+        </div>
+    </div>
+
+
+    <!-- JavaScript for interactivity -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            // --- Fade-in on scroll ---
+            const fadeElems = document.querySelectorAll('.fade-in');
+            
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observerCallback = (entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            };
+
+            const observer = new IntersectionObserver(observerCallback, observerOptions);
+            fadeElems.forEach(elem => observer.observe(elem));
+
+            
+            // --- Contact Form Message Box ---
+            const contactForm = document.getElementById('contactForm');
+            const messageBox = document.getElementById('messageBox');
+            const messageText = document.getElementById('messageText');
+            const closeButton = document.getElementById('closeButton');
+
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault(); // Prevent actual form submission
+                
+                // Show message box
+                messageText.textContent = 'Thank you! Your message has been sent.';
+                messageBox.classList.remove('opacity-0', 'pointer-events-none');
+                
+                // Reset form
+                contactForm.reset();
+            });
+
+            closeButton.addEventListener('click', () => {
+                messageBox.classList.add('opacity-0', 'pointer-events-none');
+            });
+        });
+    </script>
+
+</body>
+</html>
